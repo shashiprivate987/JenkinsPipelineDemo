@@ -3,12 +3,22 @@ pipeline{
 	stages{
 		stage('Java version'){
 			steps{
-				sh 'java --version'
+				sh 'java -version'
 			}
 		}
 		stage('Docker version'){
 			steps{
 				sh 'docker --version'
+			}
+		}
+		stage('Jenkins version'){
+			steps{
+				sh 'Jenkins --version'
+			}
+		}
+		stage('Jenkins help'){
+			steps{
+				sh 'Jenkins --help'
 			}
 		}
 	}
