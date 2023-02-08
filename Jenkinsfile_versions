@@ -1,0 +1,15 @@
+pipeline{
+	agent any
+	stages{
+		stage('Java version'){
+			steps{
+				sh 'java --version'
+			}
+		}
+		stage('Docker version'){
+			steps{
+				sh 'docker --version'
+			}
+		}
+	}
+}
