@@ -1,24 +1,12 @@
 pipeline{
 	agent any
+	options {
+		timeout(time: 1, unit: 'SECONDS')
+	}
 	stages{
 		stage('Java version'){
 			steps{
 				sh 'java -version'
-			}
-		}
-		stage('Docker version'){
-			steps{
-				sh 'docker --version'
-			}
-		}
-		stage('Jenkins version'){
-			steps{
-				sh 'Jenkins --version'
-			}
-		}
-		stage('Jenkins help'){
-			steps{
-				sh 'Jenkins --help'
 			}
 		}
 	}
